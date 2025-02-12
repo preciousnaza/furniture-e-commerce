@@ -104,6 +104,12 @@ cursor: pointer;
     color: #fff;
     font-size: 3rem;
 }
+/* .bx-menu-alt-left {
+    display: none;
+}
+:host{
+    display: none;
+} */
 }  
 .hero,
 .heroslider{
@@ -114,7 +120,10 @@ cursor: pointer;
     height: 100vh;
 } 
 .hero .swiper-wrapper .swiper-slide{
-    position: absolute;
+    display: none;
+}
+.hero .swiper-wrapper .swiper-slide.active{
+    display: block;
 }
 .hero img{
     height: 100%;
@@ -128,25 +137,30 @@ cursor: pointer;
 .swiper-button-next{
     position: absolute;
     right: -100px;
-    top: 50%;
+    top: 40%;
 }
 .swiper-button-prev{
     position: absolute;
     left: -100px;
-    top: 50%;
+    top: 40%;
 }
 .header:hover .swiper-button-next{
+    position: absolute;
     right: 40px;
+    width: 60px;
 }
 .header:hover .swiper-button-prev{
+    position: absolute;
     left: 40px;
+    width: 60px;
 }
 .swiper-button-next,
 .swiper-button-prev{
     background-color: rgba(0,0,0,0.8);
     border-radius: 50%;
-    padding: 0.5rem 2.3rem;
+    padding: 10px;
     transition: all 500ms ease-in-out;
+    width: 60px;
 }
 .swiper-icon{
     font-size: 5rem;
@@ -293,7 +307,6 @@ cursor: pointer;
 }
 .rent .box .pos span{
     display: inline-block;
-    border-radius: 3rem;
     padding: 0.3rem;
     margin-right: 0.5rem;
     color: #fff;
@@ -305,12 +318,18 @@ cursor: pointer;
 .rent .box .pos span:last-child{
     background-color: #e0203b;
 }
+.box .bottom-span{
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 10px;
+}
 .rent .box .bottom{
     font-size: 2rem;
     font-weight: 500;
     color: #555;
     transition: all 300ms ease-in-out;
     cursor: pointer;
+    margin-inline: 10px;
 }
 .rent .box .bottom div{
     display: flex;
@@ -351,25 +370,26 @@ cursor: pointer;
     transform: scale(1.1);
 }
 .box1{
-    grid-column: 1 / span 2;
-    height: 35rem;
+    grid-column: span 2;
+    grid-row: span 1;
 }
-.box2{
-    grid-column: 1;
-    grid-row:2 ;
+.box2 {
+    grid-column: span 1; 
+    grid-row: span 2;
+}
+.box2 img{
+    height: 100%;
+    object-fit: cover;
 }
 .box3{
-    grid-column: 1;
-    grid-row: 2;
+   grid-column: span 1;
+    grid-row: span 1 ;
 }
 .box4{
-    grid-column:2;
-    grid-row: 2;
+    grid-column: span 1;
+    grid-row: span 1;
 }
-.box5{
-    columns: 1 / span2;
-    grid-row: 2;
-}
+
 @media (max-width:768px) {
     .box1{
         grid-column:1 / span3;
@@ -462,6 +482,7 @@ cursor: pointer;
     grid-template-columns: 1fr 1fr 1fr;
     max-height: 99.6rem;
     margin: 0 auto;
+    margin-inline: 13rem;
 }
 .footer .col{
     flex-direction: column;
@@ -472,16 +493,19 @@ cursor: pointer;
     flex-direction: row;
     justify-content: center;
 }
+
 .footer .col:last-child span{
     font-size: 2.5rem;
     margin-right: 5rem;
     color: #fff;
+    margin-inline: 2.7px;
 }
 .footer .col a{
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-right: 5rem;
     color: #fff;
+    line-height: 2;
 }
 .footer .col h4{
     margin-bottom: 1rem;
