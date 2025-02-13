@@ -156,16 +156,24 @@ cursor: pointer;
 }
 .swiper-button-next,
 .swiper-button-prev{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(0,0,0,0.8);
     border-radius: 50%;
     padding: 10px;
     transition: all 500ms ease-in-out;
     width: 60px;
+    height: 60px;
 }
+
 .swiper-icon{
     font-size: 5rem;
     color: #fff;
+    width: 30px;
+    height: 30px;
 }
+
 .header .content{
     position: absolute;
     top: 50%;
@@ -175,11 +183,13 @@ cursor: pointer;
     z-index: 1;
     text-align: center;
 }
+
 .header .content h1{
     font-size: 7rem;
     color: #fff;
     margin-bottom: 4rem;
 }
+
 .header .search{
     width: 70rem;
     margin: 0 auto;
@@ -188,6 +198,7 @@ cursor: pointer;
     background-color: rgba(0,0,0,0.6);
     padding: 1rem 2rem;
 }
+
 .header .search input{
     width: 100%;
     padding: 1.5rem 0;
@@ -197,6 +208,7 @@ cursor: pointer;
     font-size: 1.6rem;
     text-indent: 1rem;
 }
+
 .header .search a{
     display: inline-block;
     border-radius: 0.5rem;
@@ -204,6 +216,7 @@ cursor: pointer;
     background-color: #6cbe07;
     padding: 1.5rem  4rem;
 }
+
 @media (max-width:996px) {
     .header .content h1{
         margin-bottom: 3rem;
@@ -228,28 +241,33 @@ cursor: pointer;
     .swiper-icon{
         font-size: 3rem;
     }
-    .swiper-button-next,
+    /* .swiper-button-next,
     .swiper-button-prev{
     padding: 0.2rem 2.3rem;
     
-   }
+   } */
 }
+
 .section{
     padding: 10rem 0;
 }
+
 .section.rent{
     background-color: #f0f4f7;
 }
+
 .rent-center{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(25rem,1fr));
     gap: 4rem 2rem;
 }
+
 .title{
     text-align: center;
     margin-bottom: 5rem;
     padding: 1rrem;
 }
+
 .title h1{
     font-weight: 100;
     margin-bottom: 1rem;
